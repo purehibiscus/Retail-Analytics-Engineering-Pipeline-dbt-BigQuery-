@@ -148,13 +148,10 @@ Valid relationships between tables
 **Project Structure**
 
 models/
-│
-├── staging/
-│   ├── stg_customers.sql
-│   ├── stg_orders.sql
-│   ├── stg_products.sql
-│   ├── stg_stores.sql
-│
+
+├── staging/ → stg_customers.sql → stg_orders.sql → stg_products.sql → stg_stores.sql
+
+
 ├── intermediate/
 │   ├── int_orders_enriched.sql
 │
