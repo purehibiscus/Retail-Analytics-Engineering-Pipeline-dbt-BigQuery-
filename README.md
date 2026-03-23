@@ -1,6 +1,7 @@
 **Analytics Engineering Pipeline (dbt + BigQuery)**
 
 
+
 **Project Overview**
 
 This project demonstrates an end-to-end analytics engineering workflow using dbt and BigQuery, transforming raw transactional data into a clean, scalable star schema and analytics-ready data models.
