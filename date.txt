@@ -1,0 +1,7 @@
+with date as (
+	SELELCT 
+		order_id,
+		DATE_FROM_UNIX_DATE(order_date) order_date,
+		delivery_date
+	FROM `my-dbt-customer-orders.salesDB.orders`
+)

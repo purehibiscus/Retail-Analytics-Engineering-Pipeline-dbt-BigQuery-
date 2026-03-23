@@ -1,0 +1,60 @@
+version: 2
+
+models:
+
+  - name: dim_customers
+    description: "Customer dimension table containing demographic attributes."
+    columns:
+      - name: cust_id
+        description: "Unique identifier for each customer."
+        tests:
+          - not_null
+          - unique
+
+      - name: age
+        description: "Customer age"
+
+      - name: country
+        description: "Customer country"
+
+  - name: dim_products
+    description: "Product dimension table."
+    columns:
+      - name: product_id
+        tests:
+          - not_null
+          - unique
+
+  - name: dim_store_locations
+    description: "Store location dimension with unique store locations."
+    columns:
+      - name: store_location_id
+        tests:
+          - not_null
+          - unique
+
+  - name: fct_orders
+    description: "Fact table at order grain."
+    columns:
+      - name: order_id
+        tests:
+          - not_null
+          - unique
+
+      - name: cust_id
+        tests:
+          - relationships:
+              to: ref('dim_customers')
+              field: cust_id
+
+      - name: prod_id
+        tests:
+          - relationships:
+              to: ref('dim_products')
+              field: product_id
+
+      - name: store_location_id
+        tests:
+          - relationships:
+              to: ref('dim_store_locations')
+              field: store_location_id

@@ -1,0 +1,7 @@
+product_id,product,product_category,product_sub-category,price
+P_1001,Smartphone,Electronics,Standard,200
+P_1002,Headphones,Accessories,Budget,23
+P_1003,Shoes,Fashion,Premium,350
+P_1004,Backpack,Fashion,Standard,35
+P_1005,Tablet,Accessories,Budget,499
+P_1006,Laptop,Electronics,Premium,620

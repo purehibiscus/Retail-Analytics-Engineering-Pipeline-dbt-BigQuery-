@@ -1,0 +1,10 @@
+with customer_orders as (
+	SELECT 
+		cust_id,
+		DENSE_RANK() OVER (ORDER BY order_id) as order_id,
+		trans_id,
+		CONCAT(UPPER(TRIM(first_name)), ' ', UPPER(TRIM(last_name))) as full_name, 
+		EXTRACT(month, order_date) as order_month,
+		EXTRACT(year, order_date) as order_year,
+		DATEDIFF(day, LAG(order_date) OVER (ORDER BY order_date), order_date) as days_btwn_orders, 
+)

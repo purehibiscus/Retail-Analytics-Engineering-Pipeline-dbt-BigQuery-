@@ -1,0 +1,13 @@
+with orders as (
+	SELELCT 
+		prod_id,
+		cust_id,
+		store_location_id,
+		order_id,
+		trans_id,
+		product,
+		store_name,
+		order_status,
+		delivery_type
+	FROM `my-dbt-customer-orders.salesDB.orders`
+)

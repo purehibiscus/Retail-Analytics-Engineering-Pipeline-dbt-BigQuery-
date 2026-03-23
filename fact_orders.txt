@@ -1,0 +1,6 @@
+SELECT
+    cust_id,
+    order_date,
+    LAG(order_date) OVER (PARTITION BY cust_id ORDER BY order_date) AS previous_order_date,
+    DATE_DIFF(order_date, LAG(order_date) OVER (PARTITION BY cust_id ORDER BY order_date), DAY) AS days_between_orders
+FROM {{ ref('fct_orders') }}

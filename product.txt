@@ -1,0 +1,8 @@
+with product as (
+	SELECT 
+		DENSE_RANK() OVER(ORDER BY product) as prod_id,
+		product_category as category,
+		product_sub-category as sub-category,
+		product
+	FROM `my-dbt-customer-orders.salesDB.product`
+)

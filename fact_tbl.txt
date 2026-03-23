@@ -1,0 +1,11 @@
+SELECT
+	o.order_id,
+	o.cust_id,
+	o.prod_id,
+	o.store_location_id,
+	o.order_date,
+	o.delivery_date,
+	o.price,
+	o.quantity,
+	o.order_status
+FROM {{ref('stg_orders')}} o

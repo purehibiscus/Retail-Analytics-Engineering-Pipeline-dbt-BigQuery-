@@ -1,0 +1,9 @@
+with store as (
+	SELECT  
+		DENSE_RANK() OVER(ORDER BY store_address) as store_location_id,
+		store_id,
+		store_name,
+		store_address,
+		country
+	FROM `my-dbt-customer-orders.salesDB.store`
+)
