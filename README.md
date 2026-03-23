@@ -147,27 +147,33 @@ Valid relationships between tables
 
 **Project Structure**
 
-models/
+**models**
 
-├── staging/ → stg_customers.sql → stg_orders.sql → stg_products.sql → stg_stores.sql
+**staging**
+- stg_customers.sql
+- stg_orders.sql
+- stg_products.sql
+- stg_stores.sql
 
+**intermediate**
 
-├── intermediate/
-│   ├── int_orders_enriched.sql
-│
-├── marts/
-│   ├── fct_orders.sql
-│   ├── dim_customers.sql
-│   ├── dim_products.sql
-│   ├── dim_store_locations.sql
-│   ├── mart_customer_metrics.sql
-│   ├── mart_customer_behavior.sql
-│
-seeds/
-│   ├── customers.csv
-│   ├── orders.csv
-│   ├── products.csv
-│   ├── stores.csv
+- int_orders_enriched.sql
+
+**marts**
+
+- fct_orders.sql
+- dim_customers.sql
+- dim_products.sql
+- dim_store_locations.sql
+- mart_customer_metrics.sql
+- mart_customer_behavior.sql
+
+**seeds**
+
+- customers.csv
+- orders.csv
+- products.csv
+- stores.csv
 
 
 **Business Impact**
