@@ -49,14 +49,18 @@ Analytics Layer (mart_*)
 
 **Dimension Tables**
 
-**dim_customers** | **dim_products** | **dim_store_locations**
+**dim_customers** ||  **dim_products**     || **dim_store_locations**
 
 **Tech Stack**
 
 **dbt** (Data Build Tool) – transformation & modeling
+
 **Google BigQuery** – data warehouse
+
 **SQL** – transformation logic
+
 **GitHub** – version control
+
 
 **Data Ingestion**
 
